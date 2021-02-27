@@ -24,7 +24,10 @@ npm install use-deferred-state
 useDeferredState<BaseState>(baseState: BaseState, instantValues: BaseState[] = [], defferFor = 500): BaseState
 ```
 
-The hook takes a `baseState` and returns it as is but all `baseState` changes are deferred for `defferFor` ms. You can also pass an `instantValues` – base state, that equal to `instantValues` will not be deferred.
+The hook takes a `baseState` and returns it as is but all `baseState` changes are deferred for `defferFor` ms.
+
+You can also pass an `instantValues` – array of possible base state values. When the provided base is equal (by `===` operator) to one of instant values, the returned value is changed immediately.
+In example with modal window, displayed in section below, you need to pass `true` as one of instant values, that's creates the following state flows: [show modal -> mount modal], [hide modal -> wait for 500ms -> unmount modal]
 
 ### Minimal Example
 
