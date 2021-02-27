@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #caf0f8;
+}
+.toggleButton {
+  font-size: medium;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 4px;
+}
+.modal {
+  margin-top: 30px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  padding: 10px;
+  background-color: white;
+  animation: appear 0.25s ease-in;
+}
+h2 {
+  margin-top: 10px;
+}
+.visible {
+  opacity: 1;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    overflow: 1;
+  }
+}
